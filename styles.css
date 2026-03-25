@@ -1,0 +1,156 @@
+:root {
+  --bg: #f7fbff;
+  --text: #1e2547;
+  --accent: #39a0ed;
+  --accent-2: #8a4fff;
+  --card: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+.wrapper {
+  width: min(1080px, 92%);
+  margin: 0 auto;
+}
+
+.hero {
+  position: relative;
+  min-height: 78vh;
+  background: linear-gradient(130deg, #39a0ed 0%, #8a4fff 100%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.27), transparent 45%);
+}
+
+.nav,
+.hero__content {
+  position: relative;
+  z-index: 2;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.logo {
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  font-size: 1.2rem;
+}
+
+.hero__content {
+  margin-top: auto;
+  padding: 3rem 0 4.5rem;
+  max-width: 700px;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  margin-bottom: 1rem;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  border: 2px solid #fff;
+  background: #fff;
+  color: var(--accent-2);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: #fff;
+}
+
+.btn--light {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.section--alt {
+  background: #eaf4ff;
+}
+
+.cards {
+  margin-top: 1.3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 1.2rem;
+  box-shadow: 0 8px 20px rgba(57, 160, 237, 0.12);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+.map-wrap {
+  margin-top: 1rem;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(30, 37, 71, 0.16);
+}
+
+.map-wrap iframe {
+  border: 0;
+  width: 100%;
+  height: min(64vh, 460px);
+}
+
+footer {
+  background: #1e2547;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+}
